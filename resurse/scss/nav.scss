@@ -1,0 +1,107 @@
+$tranzitie-hover: 0.3s;
+$culoare-sageata: var(--culoare-accent-rosu);
+
+%umbra-interna {
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+  transition: box-shadow $tranzitie-hover ease-in-out, color $tranzitie-hover ease;
+}
+
+header {
+  z-index: 2000;
+  position: relative;
+}
+
+.header-banners {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#ch-menu, #hamburger {
+  display: none;
+}
+
+nav {
+  .meniu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    background-color: var(--culoare-highlight);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    > li {
+      position: relative;
+      padding: 15px;
+      cursor: pointer;
+
+      > div, > a {
+        font-weight: bold;
+        color: var(--culoare-text);
+        text-decoration: none;
+        transition: color $tranzitie-hover;
+      }
+
+      &:hover {
+        @extend %umbra-interna;
+        
+        > div, > div > a, > a {
+          color: var(--culoare-accent-rosu);
+        }
+
+        > ul {
+          transform: scaleY(1);
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--culoare-highlight);
+        min-width: 200px;
+        list-style: none;
+        padding: 0;
+        border: 1px solid var(--culoare-contur);
+        z-index: 1000;
+        
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 0.4s ease-in-out;
+
+        li {
+          padding: 12px 15px;
+          border-bottom: 1px solid #444;
+          position: relative;
+          overflow: hidden;
+          
+          &:last-child { border-bottom: none; }
+
+          a {
+            display: inline-block;
+            width: 100%;
+            transition: transform $tranzitie-hover;
+          }
+
+          &::before {
+            content: '\2192';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $culoare-sageata;
+            transition: left $tranzitie-hover ease;
+          }
+
+          &:hover {
+            @extend %umbra-interna;
+            
+            a { transform: translateX(20px); }
+            &::before { left: 10px; }
+          }
+        }
+      }
+    }
+  }
+}

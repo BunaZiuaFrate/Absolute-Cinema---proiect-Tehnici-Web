@@ -1,0 +1,26 @@
+nav {
+  .meniu {
+    > li {
+      padding: 10px;
+      
+      > .text-icon {
+        display: none;
+      }
+      
+      > .imag-icon {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--culoare-text);
+        text-align: center;
+      }
+
+      &:hover > .imag-icon {
+        color: var(--culoare-accent-rosu);
+      }
+
+      ul li a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

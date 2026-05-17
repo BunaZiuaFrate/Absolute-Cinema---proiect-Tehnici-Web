@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="film, actor, lungmetraj, scurtmetraj, critica film, recenzii film, cinema, seriale, streaming, box office">
+    <meta name="description"
+        content="Catalog de filme și seriale - Descoperă cele mai bune capodopere cinematografice, recenzii și noutăți din lumea filmului.">
+    <meta name="author" content="Cojocaru Gabriele">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="./resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Filme&Seriale" />
+    <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest" />
+
+    <title>Catalog de filme si seriale - Universul Cinematografic</title>
+
+    <link rel="stylesheet" href="./resurse/css/general.css" type="text/css" />
+    <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css" />
+    <link rel="stylesheet" href="./resurse/css/nav1000.css" type="text/css" media="screen and (max-width: 1000px)" />
+    <link rel="stylesheet" href="./resurse/css/nav700.css" type="text/css" media="screen and (max-width: 700px)" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body id="pag_sus">
+    <div class="watermark-print">Acesta este un proiect școlar!</div>
+
+    <header>
+        <h1>Catalog de filme și seriale</h1>
+        <img src="./resurse/imagini/sigla.png" width="60" height="70" alt="sigla Catalog Filme" title="Logo Oficial" />
+
+        <div class="header-banners">
+            <img src="./resurse/imagini/pulp fiction.JPG" alt="Pulp Fiction" height="100" />
+            <img src="./resurse/imagini/star wars.JPG" alt="Star Wars" height="100" />
+            <img src="./resurse/imagini/the shining.JPG" alt="The Shining" height="100" />
+        </div>
+
+        <nav>
+            <input type="checkbox" id="ch-menu">
+            <label for="ch-menu" id="hamburger">
+                <div class="hamburger-container">
+                    <span class="bara bara-1"></span>
+                    <span class="bara bara-2"></span>
+                    <span class="bara bara-3"></span>
+                </div>
+                Meniu
+            </label>
+
+            <ul class="meniu">
+                <li>
+                    <div class="text-icon" id="acasa">Acasă</div>
+                    <div class="imag-icon" id="acasa-mediu">
+                        <span class="fas fa-regular fa-house"></span>
+                    </div>
+                    <ul>
+                        <li><a href="#welcome">Bine ați venit</a></li>
+                        <li><a href="#promotii">Abonamente</a></li>
+                        <li><a href="#anunturi">Noutăți Cinematografice</a></li>
+                        <li><a href="#produse">Categorii Video</a></li>
+                        <li><a href="#orar">Program Suport</a></li>
+                        <li><a href="#index-intrebari">Întrebări Frecvente</a></li>
+                        <li><a href="#trailers">Trailere</a></li>
+                        <li><a href="#pdf">Top 100 Filme (PDF)</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="text-icon"><a href="#">Cont Cinefil</a></div>
+                    <div class="imag-icon"><span class="fas fa-user-plus"></span></div>
+                    <ul>
+                        <li><a href="#">Autentificare</a></li>
+                        <li><a href="#">Creare Cont Nou</a></li>
+                        <li><a href="#">Recuperare Parolă</a></li>
+                        <li><a href="#">Istoric Vizionări</a></li>
+                        <li><a href="#">Watchlist</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Despre Noi</div>
+                    <ul>
+                        <li><a href="despre.html#prezentare">Cine suntem</a></li>
+                        <li><a href="despre.html#istoric">Istoria Cinematografiei</a></li>
+                        <li><a href="despre.html#echipa">Criticii Noștri</a></li>
+                        <li><a href="despre.html#evenimente">Festivaluri de Film</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Genuri <i class="fa-solid fa-film fa-spin"></i></div>
+                    <ul>
+                        <li><a href="#">Toate Filmele</a></li>
+                        <li><a href="#">Acțiune & SF</a></li>
+                        <li><a href="#">Dramă & Thriller</a></li>
+                        <li><a href="#">Comedie</a></li>
+                        <li><a href="#">Documentare</a></li>
+                        <li><a href="#">Seriale TV</a></li>
+                        <li><a href="#">Scurtmetraje</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact-info"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="grid-pagina">
+            <section id="welcome">
+                <hgroup>
+                    <h2>Bun venit în universul cinematografic!</h2>
+                    <p class="subtitlu">Cele mai bune <b>filme și seriale</b> într-un singur catalog</p>
+                </hgroup>
+
+                <figure>
+                    <a href="./resurse/imagini/star wars.JPG" target="_blank">
+                        <picture>
+                            <source srcset="./resurse/imagini/star wars.JPG" media="(max-width:700px)" />
+                            <img src="./resurse/imagini/star wars.JPG" alt="Star Wars Poster"
+                                title="Click pentru mărire" />
+                        </picture>
+                    </a>
+                    <figcaption><b>Filmul Săptămânii:</b> O galaxie foarte, foarte îndepărtată...</figcaption>
+                </figure>
+
+                <p class="intro">Vă mulțumim că ați ales catalogul nostru. Aici găsiți recenzii, detalii despre actori
+                    și <b>recomandări de top</b> pentru serile perfecte de film.</p>
+                <p class="anunt intro">Oferim suport pentru streaming în format 4K UHD și sunet Dolby Atmos pentru o
+                    experiență ca la cinema, direct în sufrageria dumneavoastră.</p>
+
+                <blockquote cite="https://ro.wikipedia.org/wiki/Stanley_Kubrick">
+                    "Dacă poate fi scris sau gândit, poate fi filmat." - Stanley Kubrick
+                </blockquote>
+
+                <p>Misiunea noastră este să conectăm cinefilii cu capodoperele artei vizuale, de la clasicele alb-negru
+                    până la cele mai noi blockbustere de la Hollywood.</p>
+            </section>
+
+            <section id="anunturi">
+                <h2 class="fg-img">Noutăți și Premiere</h2>
+                <ul>
+                    <li>
+                        <p><time datetime="2026-03-10T20:00">10 Martie, ora 20:00</time>,
+                            <b>Premieră Exclusivă</b> - Am adăugat documentarul "Behind the Scenes: The Shining" în
+                            catalogul VIP!
+                        </p>
+                    </li>
+                    <li>
+                        <p><time datetime="2026-04-15T19:30">15 Aprilie, ora 19:30</time>,
+                            <b>Festivalul de Film (Online)</b> - Maraton de scurtmetraje premiate la Cannes. Acces
+                            gratuit pentru toți utilizatorii înregistrați.
+                        </p>
+                    </li>
+                    <li>
+                        <p><time datetime="2026-05-01T12:00">1 Mai, ora 12:00</time>,
+                            <b>Actualizare Platformă</b> - Interfața de redare video a fost îmbunătățită. Acum puteți
+                            salva cadre direct din player.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="promotii">
+                <h2>Abonamente și Oferte</h2>
+                <article>
+                    <h3 class="titlu">Abonamentul "Binge-Watcher"</h3>
+                    <p>Catalogul nostru oferă o <b>reducere de <s>15%</s> <ins>25%</ins></b> la abonamentul anual VIP.
+                    </p>
+                    <p>Oferta este valabilă până la sfârșitul lunii curente și include acces la secțiunea <abbr
+                            title="Video on Demand">VOD</abbr> în calitate 4K.</p>
+                </article>
+
+                <article>
+                    <h3>Ofertă "Seară de Film"</h3>
+                    <p>Pachetul promoțional de weekend include:</p>
+                    <ol>
+                        <li><i lang="en">Early access</i> (acces în avans) la noile episoade din serialele partenere.
+                        </li>
+                        <li>Calitate audio superioară (Dolby Digital 5.1).</li>
+                        <li>Opțiunea de a descărca până la 10 filme offline.</li>
+                        <li>Gratis: Acces la comentariile regizorilor pentru filmele cult.</li>
+                    </ol>
+                </article>
+            </section>
+
+            <section id="produse">
+                <h2>Structura Catalogului Nostru</h2>
+                <section>
+                    <h3>Tipuri de conținut video</h3>
+                    <p>Colecția noastră este împărțită cu grijă pentru a vă facilita căutarea:</p>
+                    <dl>
+                        <dt>Lungmetraje (Blockbustere & Indie)</dt>
+                        <dd>Filme cu durată de peste 80 de minute, acoperind toate genurile majore.</dd>
+
+                        <dt>Seriale TV & Mini-serii</dt>
+                        <dd>Grupate pe sezoane și episoade, cu funcție de "Auto-Play" pentru urmărit neîntrerupt.</dd>
+
+                        <dt>Scurtmetraje</dt>
+                        <dd>Producții artistice condensate, sub 40 de minute, perfecte pentru pauze scurte.</dd>
+
+                        <dt>Secțiunea "Cult Classics"</dt>
+                        <dd>Capodopere atemporale precum <b>Pulp Fiction</b> sau <b>The Shining</b>, restaurate digital.
+                        </dd>
+                    </dl>
+
+                    <p>Evaluarea platformei noastre de către critici independenți:</p>
+                    <meter value="4.8" min="0" max="5" low="2" high="4" optimum="5">
+                        4.8 din 5 puncte
+                    </meter>
+
+                    <p>Încărcarea serverelor de streaming în acest moment:</p>
+                    <meter value="4" min="0" max="10" low="3" high="8" optimum="2">
+                        Capacitate optimă
+                    </meter>
+                </section>
+            </section>
+
+            <section id="orar">
+                <h2>Program Asistență Tehnică</h2>
+                <div class="table-container">
+                    <table id="tab-orar">
+                        <caption>Programul echipei de suport pentru probleme de redare sau cont</caption>
+                        <thead>
+                            <tr>
+                                <th>Tip Abonament</th>
+                                <th>Zile</th>
+                                <th>Interval Dimineață</th>
+                                <th>Pauză Tehnică</th>
+                                <th>Interval Seară</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">Utilizatori Standard</td>
+                                <td>Luni - Joi</td>
+                                <td>09:00 - 13:00</td>
+                                <td>13:00 - 14:00</td>
+                                <td>14:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>Vineri</td>
+                                <td>09:00 - 14:00</td>
+                                <td>- Fără Pauză -</td>
+                                <td>14:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Utilizatori VIP</td>
+                                <td>Luni - Duminică</td>
+                                <td>24/7 Support</td>
+                                <td>-</td>
+                                <td>24/7 Support</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">Tichetele de suport sunt preluate automat în platformă în maxim 30 de
+                                    minute!</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <section id="index-intrebari">
+                <h2>Întrebări Frecvente (FAQ)</h2>
+                <details>
+                    <summary>Pot descărca filmele pentru a le viziona offline?</summary>
+                    <p>Da, dacă aveți abonament de tip VIP sau Pachet Binge-Watcher, puteți descărca până la 10 titluri
+                        simultan în aplicația mobilă.</p>
+                </details>
+                <details>
+                    <summary>Ce conexiune la internet este necesară pentru calitate 4K?</summary>
+                    <p>Recomandăm o conexiune stabilă de cel puțin 25 Mbps pentru a asigura un streaming UHD fără
+                        întreruperi.</p>
+                </details>
+                <details>
+                    <summary>Filmele clasice sunt disponibile cu subtitrări în română?</summary>
+                    <p>Absolut! Peste 95% din catalogul nostru, incluzând filme precum The Shining sau Star Wars,
+                        beneficiază de subtitrări sincronizate manual în limba română.</p>
+                </details>
+            </section>
+
+            <section id="recenzii">
+                <h2>Părerile Cinefililor</h2>
+                <article>
+                    <h4>Mihai T. - Pasionat de Sci-Fi</h4>
+                    <p>"Cel mai bine organizat catalog pe care l-am folosit. Calitatea imaginii la vechile filme Star
+                        Wars este impecabilă!"</p>
+                </article>
+                <article>
+                    <h4>Elena R. - Critic amator</h4>
+                    <p>"Secțiunea de recomandări funcționează genial. Am descoperit filme europene de artă despre care
+                        nici nu știam că există."</p>
+                </article>
+            </section>
+
+            <section id="echipa">
+                <h2>Echipa Curatorială</h2>
+                <ul>
+                    <li><b>Cojocaru Gabriele</b> - Fondator & Redactor Șef</li>
+                    <li><b>Adrian S.</b> - Expert Restaurare Video</li>
+                    <li><b>Maria P.</b> - Traducător & Adaptare Subtitrări</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <section id="trailers">
+            <h2>Trailere & Conținut Video</h2>
+            <p>Urmăriți cele mai noi trailere și interviuri cu regizorii direct din interfața noastră.</p>
+            <div class="container-iframe">
+                <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/s7EdQ4FqbhY" target="ifr-video">Pulp Fiction Trailer</a>
+                    <a href="https://www.youtube.com/embed/vZ734NWnAHA" target="ifr-video">Star Wars Trailer</a>
+                    <a href="https://www.youtube.com/embed/S014oGZiSdI" target="ifr-video">The Shining Trailer</a>
+                </div>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s7EdQ4FqbhY" name="ifr-video"
+                    title="YouTube video player Trailere" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="pdf">
+            <h2>Resurse Descărcabile</h2>
+            <p>Consultați lista noastră: <b>Top 100 Filme din toate timpurile</b> (Format PDF).</p>
+            <object data="./resurse/pdf/top_100_filme.pdf" type="application/pdf" width="100%" height="500">
+                <p>Browserul dumneavoastră nu poate afișa direct PDF-ul. Nicio problemă!
+                    <a href="./resurse/pdf/top_100_filme.pdf">Faceți click aici pentru a descărca ghidul
+                        cinefilului.</a>
+                </p>
+            </object>
+        </section>
+
+    </main>
+
+    <footer id="contact-info">
+        <div class="footer-content">
+            <address>
+                <p><b>Contactează echipa platformei:</b> <br>
+                    Suport telefonic: <a href="tel:+40700000000">+40 700 000 000</a>
+                </p>
+                <p><b>Sediul Central:</b> <br>
+                    Bulevardul Cinematografiei nr. 1, București, România
+                </p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.8!2d26.1!3d44.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI0JzAwLjAiTiAyNsKwMDYnMDAuMCJF!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+                    width="400" height="250" style="border:0;" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p><b>E-mail redactie:</b> <br>
+                    <a href="mailto:contact@catalogfilme.ro">contact@catalogfilme.ro</a>
+                </p>
+            </address>
+        </div>
+
+        <div class="footer-bottom">
+            <p><a href="#pag_sus">Înapoi la începutul paginii</a></p>
+            <p>Link-uri rapide: <a href="#">Politica de Confidențialitate</a> | <a href="#">Termeni și Condiții</a> | <a
+                    href="#">DMCA</a></p>
+            <p><small>Copyright © 2026 Cojocaru Gabriele | Toate drepturile rezervate asupra catalogului digital. <br>
+                    Actualizat ultima dată: <time datetime="2026-03-15">15 Martie 2026</time>. Versiune site:
+                    3.1.0</small></p>
+        </div>
+    </footer>
+
+    <a href="#pag_sus" id="link-top" title="Mergi sus">
+        <div class="sageata"></div>
+    </a>
+</body>
+
+</html>

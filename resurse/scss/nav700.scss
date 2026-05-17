@@ -1,0 +1,100 @@
+$t: 300ms; 
+
+.header-banners {
+  flex-direction: column;
+  align-items: center;
+}
+
+#hamburger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--culoare-highlight);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+  border: 1px solid var(--culoare-accent-rosu);
+
+  .hamburger-container {
+    position: relative;
+    width: 30px;
+    height: 20px;
+
+    .bara {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      opacity: 0; 
+      border-radius: 2px;
+      animation: animatieBurger 0.6s forwards;
+    }
+
+    .bara-1 { top: 0; }
+    .bara-2 { top: 8px; }
+    .bara-3 { top: 16px; }
+
+    @for $i from 1 through 3 {
+      .bara-#{$i} {
+        animation-delay: #{$i * $t};
+      }
+    }
+  }
+}
+
+@keyframes animatieBurger {
+  0% { transform: scale(0.5); opacity: 0; background-color: white; }
+  50% { transform: scale(1.2) rotate(10deg); opacity: 0.5; background-color: var(--culoare-contur); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; background-color: var(--culoare-accent-rosu); }
+}
+
+nav .meniu {
+  display: none; 
+  flex-direction: column;
+  padding: 0;
+  background: transparent;
+
+  > li {
+    background-color: var(--culoare-highlight);
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    > .imag-icon { display: none; }
+    > .text-icon { display: block; font-size: 1rem; padding: 5px; }
+
+    &:first-child {
+      > .text-icon { display: none; }
+      > .imag-icon { display: block; font-size: 1.3rem; padding: 5px;}
+    }
+
+    ul {
+      position: static;
+      display: none;
+      transform: scaleY(0);
+      transform-origin: top;
+      padding-left: 15px;
+
+      li {
+        &::before { display: none; } 
+        a { transform: none !important; } 
+      }
+    }
+
+    &:hover ul {
+      display: block;
+      animation: deschideMeniu 0.4s forwards;
+    }
+  }
+}
+
+#ch-menu:checked ~ .meniu {
+  display: flex;
+}
+
+@keyframes deschideMeniu {
+  to { transform: scaleY(1); }
+}

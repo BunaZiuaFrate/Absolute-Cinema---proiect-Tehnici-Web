@@ -1,0 +1,17 @@
+nav .meniu > li {
+  padding: 10px 15px;
+}
+nav .meniu > li > div {
+  font-size: 0;
+}
+nav .meniu > li > div i, nav .meniu > li > div span.fas {
+  font-size: 1.5rem;
+}
+nav .meniu > li > div a {
+  font-size: 0;
+}
+nav .meniu > li > div a i, nav .meniu > li > div a span.fas {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=nav1000.css.map */
