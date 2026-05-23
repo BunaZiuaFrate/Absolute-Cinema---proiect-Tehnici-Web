@@ -1,17 +1,18 @@
 nav .meniu > li {
-  padding: 10px 15px;
+  padding: 10px;
 }
-nav .meniu > li > div {
-  font-size: 0;
+nav .meniu > li > .text-icon {
+  display: none;
 }
-nav .meniu > li > div i, nav .meniu > li > div span.fas {
+nav .meniu > li > .imag-icon {
+  display: block;
   font-size: 1.5rem;
+  color: var(--culoare-text);
+  text-align: center;
 }
-nav .meniu > li > div a {
-  font-size: 0;
+nav .meniu > li:hover > .imag-icon {
+  color: var(--culoare-accent-rosu);
 }
-nav .meniu > li > div a i, nav .meniu > li > div a span.fas {
-  font-size: 1.5rem;
+nav .meniu > li ul li a {
+  font-size: 0.9rem;
 }
-
-/*# sourceMappingURL=nav1000.css.map */

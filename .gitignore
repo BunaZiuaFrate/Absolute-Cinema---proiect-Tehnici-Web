@@ -1,1 +1,12 @@
 node_modules/
+temp/
+logs/
+backup/
+fisiere_uploadate/
+*.css.map
+.env
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

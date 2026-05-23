@@ -1,0 +1,193 @@
+:root {
+    --reset-spatiu-mic: 0.25em;
+    --reset-spatiu-mediu: 0.5em;
+    --reset-spatiu-mare: 1em;
+    --reset-spatiu-paragraf: 1.2em;
+
+    --reset-h1: 2rem;
+    --reset-h2: 1.75rem;
+    --reset-h3: 1.5rem;
+    --reset-h4: 1.25rem;
+    --reset-h5: 1.1rem;
+    --reset-h6: 1rem;
+
+    --reset-bold-weight: 700;
+    --reset-italic-style: italic;
+
+    --reset-bullet-ul: square;
+    --reset-bullet-ol: decimal-leading-zero;
+    --reset-bullet-sub: circle;
+
+    /* Tabel */
+    --reset-tabel-padding: 0.4em 0.6em;
+    --reset-tabel-border: 1px solid currentColor;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+h1 { font-size: var(--reset-h1); margin-bottom: var(--reset-spatiu-mediu); }
+h2 { font-size: var(--reset-h2); margin-bottom: var(--reset-spatiu-mediu); }
+h3 { font-size: var(--reset-h3); margin-bottom: var(--reset-spatiu-mic); }
+h4 { font-size: var(--reset-h4); margin-bottom: var(--reset-spatiu-mic); }
+h5 { font-size: var(--reset-h5); margin-bottom: var(--reset-spatiu-mic); }
+h6 { font-size: var(--reset-h6); margin-bottom: var(--reset-spatiu-mic); }
+
+p {
+    margin-bottom: var(--reset-spatiu-paragraf);
+    font-size: 1rem;
+}
+
+b, strong {
+    font-weight: var(--reset-bold-weight);
+    font-style: normal;
+}
+
+i, em, cite, dfn {
+    font-style: var(--reset-italic-style);
+    font-weight: normal;
+}
+
+ul {
+    list-style: var(--reset-bullet-ul);
+    padding-left: 1.5em;
+    margin-bottom: var(--reset-spatiu-paragraf);
+}
+
+ol {
+    list-style: var(--reset-bullet-ol);
+    padding-left: 2em;
+    margin-bottom: var(--reset-spatiu-paragraf);
+}
+
+ul ul, ol ul {
+    list-style: var(--reset-bullet-sub);
+}
+
+ol ol, ul ol {
+    list-style: lower-alpha;
+}
+
+li {
+    margin-bottom: var(--reset-spatiu-mic);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: var(--reset-spatiu-paragraf);
+}
+
+th, td {
+    padding: var(--reset-tabel-padding);
+    text-align: left;
+    border: var(--reset-tabel-border);
+    vertical-align: middle;
+}
+
+th {
+    font-weight: var(--reset-bold-weight);
+}
+
+caption {
+    padding: var(--reset-spatiu-mediu);
+    font-style: var(--reset-italic-style);
+}
+
+blockquote {
+    padding-left: var(--reset-spatiu-mare);
+    border-left: 0.25em solid currentColor;
+    margin: var(--reset-spatiu-paragraf) 0;
+    font-style: var(--reset-italic-style);
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img, video, iframe, picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: var(--reset-spatiu-mic) var(--reset-spatiu-mediu);
+}
+
+mark {
+    background-color: yellow;
+    padding: 0.1em 0.2em;
+}
+
+ins {
+    text-decoration: underline;
+}
+
+del, s, strike {
+    text-decoration: line-through;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+details {
+    margin-bottom: var(--reset-spatiu-mediu);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: var(--reset-bold-weight);
+    padding: var(--reset-spatiu-mic) 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid currentColor;
+    margin: var(--reset-spatiu-paragraf) 0;
+    opacity: 0.3;
+}

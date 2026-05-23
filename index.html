@@ -21,8 +21,9 @@
     <meta name="apple-mobile-web-app-title" content="Filme&Seriale" />
     <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest" />
 
-    <title>Catalog de filme si seriale - Universul Cinematografic</title>
+    <title>Catalog de filme si seriale - Absolute Cinema</title>
 
+    <link rel="stylesheet" href="./resurse/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./resurse/css/general.css" type="text/css" />
     <link rel="stylesheet" href="./resurse/css/nav.css" type="text/css" />
     <link rel="stylesheet" href="./resurse/css/nav1000.css" type="text/css" media="screen and (max-width: 1000px)" />
@@ -56,9 +57,9 @@
 
             <ul class="meniu">
                 <li>
-                    <div class="text-icon" id="acasa">Acasă</div>
+                    <div class="text-icon" id="acasa"><i class="fa-solid fa-house"></i> Acasă</div>
                     <div class="imag-icon" id="acasa-mediu">
-                        <span class="fas fa-regular fa-house"></span>
+                        <span class="fas fa-house"></span>
                     </div>
                     <ul>
                         <li><a href="#welcome">Bine ați venit</a></li>
@@ -72,7 +73,7 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="text-icon"><a href="#">Cont Cinefil</a></div>
+                    <div class="text-icon"><i class="fa-solid fa-user-plus"></i> <a href="#">Cont Cinefil</a></div>
                     <div class="imag-icon"><span class="fas fa-user-plus"></span></div>
                     <ul>
                         <li><a href="#">Autentificare</a></li>
@@ -83,7 +84,8 @@
                     </ul>
                 </li>
                 <li>
-                    <div>Despre Noi</div>
+                    <div class="text-icon"><i class="fa-solid fa-circle-info"></i> Despre Noi</div>
+                    <div class="imag-icon"><span class="fas fa-circle-info"></span></div>
                     <ul>
                         <li><a href="despre.html#prezentare">Cine suntem</a></li>
                         <li><a href="despre.html#istoric">Istoria Cinematografiei</a></li>
@@ -92,7 +94,8 @@
                     </ul>
                 </li>
                 <li>
-                    <div>Genuri <i class="fa-solid fa-film fa-spin"></i></div>
+                    <div class="text-icon"><i class="fa-solid fa-film fa-spin"></i> Genuri</div>
+                    <div class="imag-icon"><span class="fas fa-film fa-spin"></span></div>
                     <ul>
                         <li><a href="#">Toate Filmele</a></li>
                         <li><a href="#">Acțiune & SF</a></li>
@@ -103,7 +106,10 @@
                         <li><a href="#">Scurtmetraje</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact-info"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+                <li>
+                    <div class="text-icon"><i class="fa-regular fa-envelope"></i> <a href="#contact-info">Contact</a></div>
+                    <div class="imag-icon"><a href="#contact-info"><span class="fas fa-envelope"></span></a></div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -137,7 +143,8 @@
                 </blockquote>
 
                 <p>Misiunea noastră este să conectăm cinefilii cu capodoperele artei vizuale, de la clasicele alb-negru
-                    până la cele mai noi blockbustere de la Hollywood.</p>
+                    până la cele mai noi blockbustere de la
+                    <a href="https://www.hollywood.com" target="_blank">Hollywood</a>.</p>
             </section>
 
             <section id="anunturi">
@@ -151,8 +158,8 @@
                     </li>
                     <li>
                         <p><time datetime="2026-04-15T19:30">15 Aprilie, ora 19:30</time>,
-                            <b>Festivalul de Film (Online)</b> - Maraton de scurtmetraje premiate la Cannes. Acces
-                            gratuit pentru toți utilizatorii înregistrați.
+                            <b>Festivalul de Film (Online)</b> - Maraton de scurtmetraje premiate la
+                            <a href="https://www.festival-cannes.com" target="_blank">Cannes</a>.
                         </p>
                     </li>
                     <li>
@@ -216,6 +223,65 @@
                     <meter value="4" min="0" max="10" low="3" high="8" optimum="2">
                         Capacitate optimă
                     </meter>
+
+                    <!-- ============================================
+                         FORMULĂ MathML (bonus etapa 2)
+                         Părți diferite au stiluri diferite (culori, font-size, italic, bold)
+                         ============================================ -->
+                    <div class="formula-mathml">
+                        <h3>Formula notei medii ponderate</h3>
+                        <p>Nota finală a unui film se calculează ponderând notele criticilor:</p>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mi class="mathml-var">N</mi>
+                                <mo class="mathml-op">=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <munderover>
+                                            <mo class="mathml-sum">&#8721;</mo>
+                                            <mrow>
+                                                <mi class="mathml-sub">i</mi>
+                                                <mo class="mathml-sub">=</mo>
+                                                <mn class="mathml-sub">1</mn>
+                                            </mrow>
+                                            <mi class="mathml-sub">n</mi>
+                                        </munderover>
+                                        <mo class="mathml-paren">(</mo>
+                                        <msub>
+                                            <mi class="mathml-var">w</mi>
+                                            <mi class="mathml-sub">i</mi>
+                                        </msub>
+                                        <mo class="mathml-op">&#183;</mo>
+                                        <msub>
+                                            <mi class="mathml-var">r</mi>
+                                            <mi class="mathml-sub">i</mi>
+                                        </msub>
+                                        <mo class="mathml-paren">)</mo>
+                                    </mrow>
+                                    <mrow>
+                                        <munderover>
+                                            <mo class="mathml-sum">&#8721;</mo>
+                                            <mrow>
+                                                <mi class="mathml-sub">i</mi>
+                                                <mo class="mathml-sub">=</mo>
+                                                <mn class="mathml-sub">1</mn>
+                                            </mrow>
+                                            <mi class="mathml-sub">n</mi>
+                                        </munderover>
+                                        <msub>
+                                            <mi class="mathml-var">w</mi>
+                                            <mi class="mathml-sub">i</mi>
+                                        </msub>
+                                    </mrow>
+                                </mfrac>
+                            </mrow>
+                        </math>
+                        <p class="legenda-formula">
+                            unde <span class="mathml-var">w<sub>i</sub></span> = ponderea criticului,
+                            <span class="mathml-var">r<sub>i</sub></span> = nota acordată,
+                            <span class="mathml-var">n</span> = numărul de critici
+                        </p>
+                    </div>
                 </section>
             </section>
 
@@ -369,7 +435,7 @@
         </div>
     </footer>
 
-    <a href="#pag_sus" id="link-top" title="Mergi sus">
+    <a href="#pag_sus" id="link-top" title="Mergi sus la inceputul paginii">
         <div class="sageata"></div>
     </a>
 </body>
