@@ -1,0 +1,52 @@
+{
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default": {
+        "titlu": "Eroare !!!",
+        "text": "A survenit o eroare neașteptată.",
+        "imagine": "eroare_generala.png"
+    },
+    "info_erori": [
+        {
+            "identificator": 404,
+            "status": true,
+            "titlu": "404 - N-am, bre!",
+            "text": "Nu-i pe serverul ăsta, sorry, caută în altă parte!",
+            "imagine": "lupa.png"
+        },
+        {
+            "identificator": 403,
+            "status": true,
+            "titlu": "403 - Da, tu ce cauți aici?!!",
+            "text": "Ai greșit ruta. Stânga-împrejur și pa!",
+            "imagine": "interzis.png"
+        },
+        {
+            "identificator": 400,
+            "status": true,
+            "titlu": "400 - Bad Request",
+            "text": "Cerere greșită. Verificați parametrii trimiși.",
+            "imagine": "cerere_gresita.png"
+        },
+        {
+            "identificator": 1,
+            "status": false,
+            "titlu": "Site în lucru",
+            "text": "Muncim, muncim!",
+            "imagine": "constructie.png"
+        },
+        {
+            "identificator": 2,
+            "status": false,
+            "titlu": "Eroare bază de date",
+            "text": "Reveniți mai târziu!",
+            "imagine": "baza_date.png"
+        },
+        {
+            "identificator": 3,
+            "status": false,
+            "titlu": "Date greșite",
+            "text": "Verificați datele introduse.",
+            "imagine": "date_gresite.png"
+        }
+    ]
+}

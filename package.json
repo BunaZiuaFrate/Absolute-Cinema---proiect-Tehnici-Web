@@ -6,6 +6,14 @@
     "film",
     "cinema"
   ],
+  "homepage": "https://github.com/BunaZiuaFrate/Absolute-Cinema---proiect-Tehnici-Web#readme",
+  "bugs": {
+    "url": "https://github.com/BunaZiuaFrate/Absolute-Cinema---proiect-Tehnici-Web/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BunaZiuaFrate/Absolute-Cinema---proiect-Tehnici-Web.git"
+  },
   "license": "ISC",
   "author": "Cojocaru Gabriele",
   "type": "commonjs",

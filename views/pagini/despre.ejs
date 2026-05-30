@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+    <title>Catalog de filme si seriale - Absolute Cinema</title>
+    <meta name="keywords"
+        content="film, actor, lungmetraj, scurtmetraj, critica film, recenzii film, cinema, seriale, streaming, box office">
+    <meta name="description"
+        content="Catalog de filme și seriale - Descoperă cele mai bune capodopere cinematografice, recenzii și noutăți din lumea filmului.">
+
+    <%- include('../fragmente/head.ejs') %>
+
+    </head>
+
+<body id="pag_sus">
+    <div class="watermark-print">Acesta este un proiect școlar!</div>
+
+    <%- include('../fragmente/header.ejs') %>
+    <main>
+        <section id="prezentare">
+            <h2>Despre Absolute Cinema</h2>
+            <p>Suntem un catalog dedicat pasionaților de film și seriale. Misiunea noastră este să aducem
+                cele mai bune producții cinematografice la un click distanță.</p>
+
+            <h3>Trailer promoțional</h3>
+            <video class="video-promo"
+                   poster="/resurse/imagini/star wars.jpg"
+                   controls
+                   preload="auto">
+                <source src="/resurse/video/film.mp4" type="video/mp4">
+                <source src="/resurse/video/film.webm" type="video/webm">
+                <track src="/resurse/video/film_ro.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                <track src="/resurse/video/film_en.vtt" kind="subtitles" srclang="en" label="English">
+                Browserul dumneavoastră nu suportă redarea video HTML5.
+            </video>
+
+            <h3>De ce Absolute Cinema?</h3>
+            <ul>
+                <li>Catalog actualizat săptămânal cu cele mai noi lansări</li>
+                <li>Recenzii scrise de critici pasionați</li>
+                <li>Subtitrări disponibile în română și engleză</li>
+                <li>Acces la trailere și materiale exclusive</li>
+            </ul>
+
+            <p>Vizitați și partenerul nostru oficial:
+                <a href="https://www.imdb.com" target="_blank">IMDB — baza de date cinematografică</a>
+            </p>
+        </section>
+    </main>
+    <%- include('../fragmente/footer.ejs') %>
+
+    <a href="#pag_sus" id="link-top" title="Mergi sus la inceputul paginii">
+        <div class="sageata"></div>
+    </a>
+</body>
+
+</html>

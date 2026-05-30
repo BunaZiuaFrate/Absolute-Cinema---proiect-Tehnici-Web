@@ -1,22 +1,26 @@
-:root {
+body {
     --culoare-fundal: #111111;
     --culoare-text: #E0E0E0;
     --culoare-contur: #D4AF37;
     --culoare-accent-rosu: #E50914;
     --culoare-highlight: #2A2A2A; 
     --margine-pagina: 120px;
-}
 
-html {
-    font-size: 16px;
-}
-
-body {
     background-color: var(--culoare-fundal);
     color: var(--culoare-text);
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
+}
+
+html {
+    font-size: 16px;
+    transition: font-size 0.5s ease;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 main {
@@ -42,6 +46,15 @@ a {
 a:hover {
     color: var(--culoare-contur);
     text-decoration: underline;
+}
+
+header, footer {
+    background-color: var(--culoare-highlight);
+    border: 1px solid var(--culoare-contur);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px var(--margine-pagina);
+    box-shadow: 0px 0px 12px rgba(212, 175, 55, 0.15);
 }
 
 #grid-pagina {
@@ -151,10 +164,30 @@ img, video {
     margin-top: 15px;
 }
 
+#tab-orar caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
+    color: var(--culoare-contur);
+}
+
 #tab-orar th, #tab-orar td {
     border: 1px solid var(--culoare-contur);
     padding: 8px;
     text-align: center;
+    transition: box-shadow 0.5s ease;
+}
+
+#tab-orar th:nth-child(odd), 
+#tab-orar td:nth-child(odd) {
+    border-right-color: var(--culoare-accent-rosu);
+    border-right-width: 1px;
+}
+
+#tab-orar th:nth-child(even), 
+#tab-orar td:nth-child(even) {
+    border-right-color: var(--culoare-contur);
+    border-right-width: 1px;
 }
 
 #tab-orar thead th {
@@ -176,9 +209,9 @@ img, video {
     background-color: #222222;
 }
 
-#tab-orar tbody tr:hover {
-    box-shadow: inset 0 0 10px 2px var(--culoare-contur);
-    transition: box-shadow 0.3s ease;
+#tab-orar tbody tr:hover td,
+#tab-orar tbody tr:hover th {
+    box-shadow: inset 0 0 15px 3px var(--culoare-contur);
 }
 
 #link-top {
@@ -197,6 +230,7 @@ img, video {
     border-bottom: 3px solid #1A1A1A;
     border-left: 3px solid var(--culoare-contur);
     border-right: 3px solid var(--culoare-contur);
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.7);
     opacity: 0.6;
     font-size: 1.4rem;
     font-weight: bold;
@@ -216,17 +250,105 @@ img, video {
 #link-top::after {
     content: '↑';
     display: inline-block;
-    transition: transform 0.5s ease;
+    filter: blur(1.5px);
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 #link-top:hover::after {
     transform: rotate(-360deg);
+    filter: blur(0);
+}
+
+.formula-mathml {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #1A1A1A;
+    border-left: 4px solid var(--culoare-accent-rosu);
+    border-radius: 5px;
+}
+
+.formula-mathml h3 {
+    margin-bottom: 10px;
+}
+
+/* Formula*/
+.formula-mathml math {
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    color: var(--culoare-text);
+}
+
+/* Variabile*/
+.mathml-var {
+    color: var(--culoare-contur);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Operatori*/
+.mathml-op {
+    color: var(--culoare-accent-rosu);
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0 4px;
+}
+
+/* Numere*/
+.mathml-num {
+    color: var(--culoare-text);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Suma*/
+.mathml-sum {
+    color: #F4D03F;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* Indici*/
+.mathml-sub {
+    color: #B0B0B0;
+    font-style: italic;
+    font-size: 0.7em;
+    vertical-align: sub;
+}
+
+/* Paranteze */
+.mathml-paren {
+    color: #FF6B6B;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Legenda*/
+.legenda-formula {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #B0B0B0;
+    text-align: center;
+    margin-top: 10px;
+}
+.legenda-formula {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #B0B0B0;
+    text-align: center;
+    margin-top: 10px;
 }
 
 @media screen and (max-width:1200px) {
     html { font-size: 15px; } 
 
     body { --margine-pagina: 60px; }
+    
+    header, footer {
+        margin: 10px var(--margine-pagina);
+    }
     
     #grid-pagina {
         grid-template-columns: 1fr 1fr;
@@ -244,11 +366,16 @@ img, video {
     html { font-size: 14px; } 
 
     *:not(.bara) {
-        transition: none !important;
+        transition: none !important;    
         animation: none !important;
     }
 
     body { --margine-pagina: 15px; }
+    
+    header, footer {
+        margin: 8px var(--margine-pagina);
+        padding: 12px;
+    }
     
     #grid-pagina { 
         display: grid;
@@ -282,6 +409,94 @@ img, video {
     }
 }
 
+.video-promo {
+    width: 90%;
+    min-width: 250px;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid var(--culoare-contur);
+    border-radius: 6px;
+    background-color: #000;
+}
+
+::cue {
+    background-color: rgba(17, 17, 17, 0.85);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 4px 8px;
+}
+
+::cue(b) {
+    font-weight: bold;
+    color: var(--culoare-contur);
+}
+
+body {
+    --culoare-link-vizitat: var(--culoare-contur);
+}
+
+a:visited {
+    color: var(--culoare-link-vizitat);
+}
+
+a[href^="http"]::before {
+    content: "\2BB3";
+    font-size: 1.5em;
+    margin-right: 0.25em;
+    color: var(--culoare-accent-rosu);
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+a[href^="http"]:hover::before {
+    color: var(--culoare-contur);
+}
+
+main a {
+    background-image: radial-gradient(
+        circle,
+        var(--culoare-accent-rosu) 0%,
+        var(--culoare-accent-rosu) 40%,
+        transparent 80%,
+        transparent 100%
+    );
+    background-position: center;
+    background-size: 0 0;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+main a:hover {
+    background-size: 100% 100%;
+    color: white !important;
+}
+
+main a:active {
+    outline: 2px solid var(--culoare-contur);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+.footer-user-data {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid var(--culoare-contur);
+    border-radius: 4px;
+}
+
+.footer-user-data code {
+    color: var(--culoare-accent-rosu);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
 .watermark-print {
     display: none;
 }
@@ -300,29 +515,42 @@ img, video {
         color: black !important;
     }
 
-    .container-iframe, #trailers, #link-top, #pdf, nav, .header-banners, #hamburger, #ch-menu {
+    img, video, iframe, figure, figcaption, object, picture,
+    .container-iframe, #trailers, #link-top, #pdf, 
+    .header-banners, #hamburger, #ch-menu,
+    nav {
         display: none !important;
     }
 
     .watermark-print {
         display: block !important;
-        position: absolute;
+        position: fixed;
         top: 0;
-        left: 10%;
+        left: 50%;
+        transform: translateX(-50%);
         width: 80%;
-        border: 2px dotted black;
+        border: 3px dotted black;
         text-align: center;
         padding: 10px;
         font-weight: bold;
+        background-color: white;
         color: black !important;
+        font-size: 0.85rem;
+        z-index: 9998;
     }
 
     header {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
         page-break-after: always;
+        background-color: white !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     h1 {
@@ -336,6 +564,10 @@ img, video {
     footer {
         page-break-before: always;
         display: block;
+        background-color: white !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
     }
 
     #grid-pagina, #grid-pagina > * {
@@ -343,6 +575,8 @@ img, video {
         box-shadow: none !important;
         border: 1px solid black !important;
         margin-bottom: 20px;
+        background-color: white !important;
+        color: black !important;
         page-break-inside: avoid;
     }
 
@@ -365,7 +599,11 @@ img, video {
         justify-content: center;
         align-items: center;
         text-align: center;
+        color: black;
         font-size: 11px;
+        font-weight: bold;
+        background-color: white;
         z-index: 9999;
+        pointer-events: none;
     }
 }

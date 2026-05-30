@@ -18,7 +18,6 @@
     --reset-bullet-ol: decimal-leading-zero;
     --reset-bullet-sub: circle;
 
-    /* Tabel */
     --reset-tabel-padding: 0.4em 0.6em;
     --reset-tabel-border: 1px solid currentColor;
 }
